@@ -53,7 +53,7 @@ oc create -f cis-deploy.yaml
 ```
 # BIGIP static route should be updated automatically, based OVN 
 
-![static-route.png.]()
+![static-route](static-route.png)
 
 # Deploy sample Application to and VirtualServer configuration
 
@@ -73,14 +73,14 @@ oc create -f sample-app-vs.yaml
 # Check BIG-IP configuration crd VS and pool created with default pool assigned to newly created VS:
 
 VS Config:
-![virtual-server]{virtual-server.png}
+![virtual-server](virtual-server.png)
 
 Pool Config:
 
-![pool-list]{pool-list.png}
+![pool-list](pool-list.png)
 
 Resource assign:
 
-![vs-pool-resource]{vs-pool-resource.png}
+![vs-pool-resource](vs-pool-resource.png)
 
 
