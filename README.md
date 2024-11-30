@@ -83,4 +83,7 @@ Resource assign:
 
 ![vs-pool-resource](vs-pool-resource.png)
 
+the code was cloned from github link of F5 bharat
+https://github.com/bsmerja/ocp-cis-static-route/tree/main
+
 
