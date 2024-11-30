@@ -43,8 +43,8 @@ spec:
         args:
         - --bigip-username=$(BIGIP_USERNAME)
         - --bigip-password=$(BIGIP_PASSWORD)
-        - --bigip-url=10.1.10.5
-        - --bigip-partition=okd
+        - --bigip-url=192.168.110.167
+        - --bigip-partition=p2
         - --as3-validation=true
         - --disable-teems=true
         - --log-as3-response=true
@@ -54,3 +54,4 @@ spec:
         - --pool-member-type=cluster
         - --insecure=true
         - --namespace=default
+        - --log-level=debug
