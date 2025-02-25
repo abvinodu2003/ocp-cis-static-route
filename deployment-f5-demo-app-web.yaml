@@ -1,0 +1,27 @@
+﻿kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: f5-demo-app-web
+  namespace: default
+  annotations:
+    deployment.kubernetes.io/revision: '1'
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: f5-demo-app-web
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: f5-demo-app-web
+    spec:
+      containers:
+        - name: f5-demo-app-web
+          image: 'f5devcentral/f5-demo-app:latest'
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          env:
+            - name: service_name
+              value: f5-demo-app-web

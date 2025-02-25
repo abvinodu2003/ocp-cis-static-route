@@ -1,0 +1,28 @@
+﻿kind: Service
+apiVersion: v1
+metadata:
+  name: f5-demo-app-web
+  namespace: default
+  labels:
+    app: f5-demo-app-web
+  annotations:
+    cis.f5.com/ip: 192.168.101.166
+spec:
+  clusterIP: 172.30.17.10
+  externalTrafficPolicy: Cluster
+  ipFamilies:
+    - IPv4
+  ports:
+    - name: f5-demo-app-web
+      protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30318
+  internalTrafficPolicy: Cluster
+  clusterIPs:
+    - 172.30.17.10
+  allocateLoadBalancerNodePorts: true
+  type: LoadBalancer
+  loadBalancerClass: testlbclass
+  selector:
+    app: f5-demo-app-web
